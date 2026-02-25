@@ -1,3 +1,4 @@
+import 'package:fintech_ui/screens/forgetPassword/password_reset_success.dart';
 import 'package:fintech_ui/screens/home/home_page.dart';
 import 'package:fintech_ui/utils/colors/colors.dart';
 import 'package:fintech_ui/widgets/button.dart';
@@ -77,9 +78,11 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
               Spacer(),
               Button(
                 onPressed: () {
-                  Navigator.of(
-                    context,
-                  ).push(MaterialPageRoute(builder: (context) => HomePage()));
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => EmailSentSuccessPage(),
+                    ),
+                  );
                 },
                 text: "Continue",
                 bgColor: blueColor,
