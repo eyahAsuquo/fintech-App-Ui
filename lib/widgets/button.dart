@@ -16,13 +16,14 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
+        padding: EdgeInsets.all(25),
         minimumSize: Size(double.infinity, 50),
         backgroundColor: bgColor,
         foregroundColor: fgColor,
         elevation: 0,
       ),
       onPressed: onPressed,
-      child: Text(text, style: TextStyle(fontWeight: .w500)),
+      child: Text(text, style: TextStyle(fontWeight: .bold)),
     );
   }
 }

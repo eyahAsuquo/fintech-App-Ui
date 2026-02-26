@@ -1,5 +1,4 @@
 import 'package:fintech_ui/screens/forgetPassword/password_reset_success.dart';
-import 'package:fintech_ui/screens/home/home_page.dart';
 import 'package:fintech_ui/utils/colors/colors.dart';
 import 'package:fintech_ui/widgets/button.dart';
 import 'package:fintech_ui/widgets/form_fields.dart';

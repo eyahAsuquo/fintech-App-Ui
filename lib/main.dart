@@ -1,8 +1,5 @@
-import 'package:fintech_ui/screens/forgetPassword/email_sent.dart';
-import 'package:fintech_ui/screens/logIn/log_in.dart';
-import 'package:fintech_ui/screens/onboarding/onboarding_card.dart';
-import 'package:fintech_ui/screens/onboarding/onboarding_screen.dart';
-import 'package:fintech_ui/screens/signUp/sign_up.dart';
+import 'package:fintech_ui/screens/Account_SetUp/account_setup.dart';
+import 'package:fintech_ui/screens/Account_SetUp/setup_account.dart';
 
 import 'package:fintech_ui/utils/colors/colors.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Fintech UI',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: blueColor)),
-      home: EmailSentPage(),
+      home: SetupAccountPage(),
     );
   }
 }

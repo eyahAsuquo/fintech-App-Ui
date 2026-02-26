@@ -1,18 +1,13 @@
+import 'package:fintech_ui/screens/Account_SetUp/account_verification.dart';
 import 'package:fintech_ui/screens/home/home_page.dart';
 import 'package:fintech_ui/utils/colors/colors.dart';
 import 'package:fintech_ui/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class EmailSentSuccessPage extends StatefulWidget {
-  const EmailSentSuccessPage({super.key});
+class SetupAccountPage extends StatelessWidget {
+  const SetupAccountPage({super.key});
 
-  @override
-  State<EmailSentSuccessPage> createState() => _EmailSentSuccessPageState();
-}
-
-class _EmailSentSuccessPageState extends State<EmailSentSuccessPage> {
-  final TextEditingController emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,44 +19,47 @@ class _EmailSentSuccessPageState extends State<EmailSentSuccessPage> {
           child: Column(
             mainAxisAlignment: .center,
             children: [
+              Spacer(),
               Container(
-                width: 60,
-                height: 60,
+                width: 250,
+                height: 250,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage("assets/img/glossy.png"),
+                    fit: BoxFit.contain,
+                    image: AssetImage("assets/img/glossy (2).png"),
                   ),
                 ),
               ),
               SizedBox(height: 30),
               Text(
-                "Hi! 👋",
+                "Let's get your account set up!",
                 style: GoogleFonts.inter(
-                  fontSize: 20,
+                  fontSize: 24,
                   fontWeight: .bold,
                   color: deepBlue,
                 ),
                 textAlign: .center,
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Text(
-                  "Your password has been reset, you can now log back into your brees account",
-                  style: GoogleFonts.inter(fontSize: 14, color: black),
+                  "Account can be your bank, credit card or your digital wallet.",
+                  style: GoogleFonts.inter(fontSize: 16, color: black),
                   textAlign: .center,
                 ),
               ),
-              SizedBox(height: 50),
+              Spacer(),
 
               Button(
                 onPressed: () {
                   Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => HomePage()),
+                    MaterialPageRoute(
+                      builder: (context) => AccountVerificationPage(),
+                    ),
                   );
                 },
-                text: "Go to Bress app",
+                text: "Let's get started",
                 bgColor: blueColor,
                 fgColor: white,
               ),
