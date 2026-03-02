@@ -1,3 +1,4 @@
+import 'package:fintech_ui/screens/home/account_card_page.dart';
 import 'package:fintech_ui/utils/colors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -91,7 +92,13 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: .end,
                         children: [
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (_) => AccountCardPage(),
+                                ),
+                              );
+                            },
                             icon: Icon(
                               Icons.chevron_right_rounded,
                               color: Colors.white,
