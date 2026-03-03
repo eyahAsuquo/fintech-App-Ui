@@ -1,5 +1,5 @@
-import 'package:fintech_ui/screens/Account_SetUp/account_setup.dart';
 import 'package:fintech_ui/screens/Account_SetUp/setup_account.dart';
+import 'package:fintech_ui/screens/budget/no_budget_page.dart';
 
 import 'package:fintech_ui/utils/colors/colors.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Fintech UI',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: blueColor)),
-      home: SetupAccountPage(),
+      home: NoBudgetPage(),
     );
   }
 }

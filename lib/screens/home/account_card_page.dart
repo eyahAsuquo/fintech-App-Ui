@@ -76,7 +76,7 @@ class AccountCardPage extends StatelessWidget {
                         ),
 
                         trailing: Text(
-                          "1,050.00",
+                          "N1,050.00",
                           style: GoogleFonts.inter(
                             color: black,
                             fontSize: 16,
@@ -95,7 +95,7 @@ class AccountCardPage extends StatelessWidget {
                         ),
 
                         trailing: Text(
-                          "6,083.00",
+                          "N6,083.00",
                           style: GoogleFonts.inter(
                             color: black,
                             fontSize: 16,

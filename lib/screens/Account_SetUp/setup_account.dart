@@ -1,5 +1,4 @@
 import 'package:fintech_ui/screens/Account_SetUp/account_verification.dart';
-import 'package:fintech_ui/screens/home/home_page.dart';
 import 'package:fintech_ui/utils/colors/colors.dart';
 import 'package:fintech_ui/widgets/button.dart';
 import 'package:flutter/material.dart';

@@ -4,12 +4,14 @@ class Button extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
   final Color? bgColor, fgColor;
+  final Size? size;
   const Button({
     super.key,
     required this.onPressed,
     required this.text,
     this.bgColor,
     this.fgColor,
+    this.size,
   });
 
   @override
@@ -17,7 +19,7 @@ class Button extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         padding: EdgeInsets.all(25),
-        minimumSize: Size(double.infinity, 50),
+        minimumSize: size ?? Size(double.infinity, 50),
         backgroundColor: bgColor,
         foregroundColor: fgColor,
         elevation: 0,
