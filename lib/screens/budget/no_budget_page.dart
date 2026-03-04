@@ -1,7 +1,8 @@
 import 'package:fintech_ui/screens/budget/create_budget.dart';
-import 'package:fintech_ui/screens/budget/pop_up.dart';
+
 import 'package:fintech_ui/utils/colors/colors.dart';
 import 'package:fintech_ui/widgets/button.dart';
+import 'package:fintech_ui/widgets/pop_up.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -43,9 +43,9 @@ class CardPopUp extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 10),
+          // const SizedBox(height: 10),
           Image.asset(imgText),
-          SizedBox(height: 20),
+          // SizedBox(height: 20),
           Column(
             spacing: 15,
             children: [

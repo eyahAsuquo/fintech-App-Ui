@@ -1,4 +1,3 @@
-import 'package:fintech_ui/screens/budget/pop_up.dart';
 import 'package:fintech_ui/screens/budget/set_budget_amount.dart';
 import 'package:fintech_ui/utils/colors/colors.dart';
 import 'package:fintech_ui/widgets/button.dart';
@@ -113,7 +112,11 @@ class _CreateBudgetPageState extends State<CreateBudgetPage> {
 
               SizedBox(height: size.height * 0.25),
               Button(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => SetBudgetAmountPage()),
+                  );
+                },
                 text: "Continue",
                 fgColor: white,
                 bgColor: blueColor,

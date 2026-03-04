@@ -1,3 +1,4 @@
+import 'package:fintech_ui/screens/budget/budget_preview.dart';
 import 'package:fintech_ui/utils/colors/colors.dart';
 import 'package:fintech_ui/widgets/button.dart';
 import 'package:fintech_ui/widgets/form_fields.dart';
@@ -153,7 +154,11 @@ class _SetBudgetAmountPageState extends State<SetBudgetAmountPage> {
               ),
               SizedBox(height: size.height * 0.25),
               Button(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => BudgetPreviewPage()),
+                  );
+                },
                 text: "Next",
                 bgColor: blueColor,
                 fgColor: white,
