@@ -14,6 +14,7 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: blueColor,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: blueColor,
         foregroundColor: white,
         elevation: 0,
@@ -38,157 +39,159 @@ class ProfilePage extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    Row(
-                      spacing: 8,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Row(
+                        spacing: 8,
 
-                      children: [
-                        Image.asset("assets/img/Avatar.png"),
-                        Column(
-                          crossAxisAlignment: .start,
-                          mainAxisAlignment: .center,
-                          children: [
-                            Text(
-                              "Donye Collins",
-                              style: GoogleFonts.inter(
-                                color: white,
-                                fontSize: 18,
-                                fontWeight: .bold,
+                        children: [
+                          Image.asset("assets/img/Avatar.png"),
+                          Column(
+                            crossAxisAlignment: .start,
+                            mainAxisAlignment: .center,
+                            children: [
+                              Text(
+                                "Donye Collins",
+                                style: GoogleFonts.inter(
+                                  color: white,
+                                  fontSize: 18,
+                                  fontWeight: .bold,
+                                ),
                               ),
-                            ),
-                            Text(
-                              "iamcollinsdonny@gmail.com",
-                              style: GoogleFonts.inter(
-                                color: white,
-                                fontSize: 12,
-                                // fontWeight: .bold,
+                              Text(
+                                "iamcollinsdonny@gmail.com",
+                                style: GoogleFonts.inter(
+                                  color: white,
+                                  fontSize: 12,
+                                  // fontWeight: .bold,
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          Container(
-            width: double.infinity,
-            height: size.height * 0.7,
-            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-            decoration: BoxDecoration(
-              color: white,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(40),
-                topRight: Radius.circular(40),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
-            child: Column(
-              mainAxisAlignment: .start,
-              crossAxisAlignment: .start,
-              spacing: 20,
-              children: [
-                ListTile(
-                  onTap: () => Navigator.of(
-                    context,
-                  ).push(MaterialPageRoute(builder: (_) => MyAccountPage())),
-                  leading: CircleAvatar(
-                    backgroundColor: const Color.fromARGB(111, 64, 195, 255),
+            Container(
+              width: double.infinity,
+              height: size.height * 0.7,
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              decoration: BoxDecoration(
+                color: white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(40),
+                ),
+              ),
+              child: Column(
+                mainAxisAlignment: .start,
+                crossAxisAlignment: .start,
+                spacing: 20,
+                children: [
+                  ListTile(
+                    onTap: () => Navigator.of(
+                      context,
+                    ).push(MaterialPageRoute(builder: (_) => MyAccountPage())),
+                    leading: CircleAvatar(
+                      backgroundColor: const Color.fromARGB(111, 64, 195, 255),
 
-                    radius: 20,
-                    child: Icon(Icons.person_2, color: deepBlue),
+                      radius: 20,
+                      child: Icon(Icons.person_2, color: deepBlue),
+                    ),
+                    title: Text(
+                      "My Account",
+                      style: GoogleFonts.inter(
+                        color: deepBlue,
+                        fontSize: 14,
+                        fontWeight: .bold,
+                      ),
+                    ),
+                    trailing: Icon(Icons.chevron_right),
                   ),
-                  title: Text(
-                    "My Account",
+                  ListTile(
+                    onTap: () => Navigator.of(
+                      context,
+                    ).push(MaterialPageRoute(builder: (_) => SettingPage())),
+                    leading: CircleAvatar(
+                      backgroundColor: const Color.fromARGB(111, 64, 195, 255),
+
+                      radius: 20,
+                      child: Icon(Icons.settings, color: deepBlue),
+                    ),
+                    title: Text(
+                      "Settings",
+                      style: GoogleFonts.inter(
+                        color: deepBlue,
+                        fontSize: 14,
+                        fontWeight: .bold,
+                      ),
+                    ),
+                    trailing: Icon(Icons.chevron_right),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    leading: CircleAvatar(
+                      backgroundColor: const Color.fromARGB(111, 64, 195, 255),
+
+                      radius: 20,
+                      child: Icon(Icons.question_mark, color: deepBlue),
+                    ),
+                    title: Text(
+                      "Help Center",
+                      style: GoogleFonts.inter(
+                        color: deepBlue,
+                        fontSize: 14,
+                        fontWeight: .bold,
+                      ),
+                    ),
+                    trailing: Icon(Icons.chevron_right),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    leading: CircleAvatar(
+                      backgroundColor: const Color.fromARGB(111, 64, 195, 255),
+
+                      radius: 20,
+                      child: Icon(Icons.phone, color: deepBlue),
+                    ),
+                    title: Text(
+                      "Contact",
+                      style: GoogleFonts.inter(
+                        color: deepBlue,
+                        fontSize: 14,
+                        fontWeight: .bold,
+                      ),
+                    ),
+                    trailing: Icon(Icons.chevron_right),
+                  ),
+                  Spacer(flex: 3),
+                  //
+                  Text(
+                    "You joined Brees on September 2021. It’s been 1 month since then and our mission is still the same, help you better manage your finance like a brees.",
+                    textAlign: TextAlign.center,
+
                     style: GoogleFonts.inter(
-                      color: deepBlue,
-                      fontSize: 14,
-                      fontWeight: .bold,
+                      color: Colors.grey.shade400,
+                      fontSize: 12,
+                      fontWeight: .w600,
                     ),
                   ),
-                  trailing: Icon(Icons.chevron_right),
-                ),
-                ListTile(
-                  onTap: () => Navigator.of(
-                    context,
-                  ).push(MaterialPageRoute(builder: (_) => SettingPage())),
-                  leading: CircleAvatar(
-                    backgroundColor: const Color.fromARGB(111, 64, 195, 255),
-
-                    radius: 20,
-                    child: Icon(Icons.settings, color: deepBlue),
-                  ),
-                  title: Text(
-                    "Settings",
-                    style: GoogleFonts.inter(
-                      color: deepBlue,
-                      fontSize: 14,
-                      fontWeight: .bold,
-                    ),
-                  ),
-                  trailing: Icon(Icons.chevron_right),
-                ),
-                ListTile(
-                  onTap: () {},
-                  leading: CircleAvatar(
-                    backgroundColor: const Color.fromARGB(111, 64, 195, 255),
-
-                    radius: 20,
-                    child: Icon(Icons.question_mark, color: deepBlue),
-                  ),
-                  title: Text(
-                    "Help Center",
-                    style: GoogleFonts.inter(
-                      color: deepBlue,
-                      fontSize: 14,
-                      fontWeight: .bold,
-                    ),
-                  ),
-                  trailing: Icon(Icons.chevron_right),
-                ),
-                ListTile(
-                  onTap: () {},
-                  leading: CircleAvatar(
-                    backgroundColor: const Color.fromARGB(111, 64, 195, 255),
-
-                    radius: 20,
-                    child: Icon(Icons.phone, color: deepBlue),
-                  ),
-                  title: Text(
-                    "Contact",
-                    style: GoogleFonts.inter(
-                      color: deepBlue,
-                      fontSize: 14,
-                      fontWeight: .bold,
-                    ),
-                  ),
-                  trailing: Icon(Icons.chevron_right),
-                ),
-                Spacer(flex: 3),
-                //
-                Text(
-                  "You joined Brees on September 2021. It’s been 1 month since then and our mission is still the same, help you better manage your finance like a brees.",
-                  textAlign: TextAlign.center,
-
-                  style: GoogleFonts.inter(
-                    color: Colors.grey.shade400,
-                    fontSize: 12,
-                    fontWeight: .w600,
-                  ),
-                ),
-                Spacer(),
-              ],
+                  Spacer(),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

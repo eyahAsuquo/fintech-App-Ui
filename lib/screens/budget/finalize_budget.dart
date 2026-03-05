@@ -1,4 +1,4 @@
-import 'package:fintech_ui/screens/home/home_page.dart';
+import 'package:fintech_ui/nav_bar.dart';
 import 'package:fintech_ui/utils/colors/colors.dart';
 import 'package:fintech_ui/widgets/button.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +9,7 @@ class FinalizeBudgetPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    // final Size size = MediaQuery.of(context).size;
 
     return Scaffold(
       backgroundColor: blueColor,
@@ -50,9 +50,9 @@ class FinalizeBudgetPage extends StatelessWidget {
             // SizedBox(height: size.height * 0.3),
             Button(
               onPressed: () {
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (_) => HomePage()),
-                );
+                Navigator.of(
+                  context,
+                ).pushReplacement(MaterialPageRoute(builder: (_) => NavBar()));
               },
               text: "Set Budget",
               fgColor: blueColor,

@@ -1,4 +1,4 @@
-import 'package:fintech_ui/screens/home/home_page.dart';
+import 'package:fintech_ui/nav_bar.dart';
 import 'package:fintech_ui/utils/colors/colors.dart';
 import 'package:fintech_ui/widgets/button.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +58,7 @@ class _EmailSentSuccessPageState extends State<EmailSentSuccessPage> {
               Button(
                 onPressed: () {
                   Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => HomePage()),
+                    MaterialPageRoute(builder: (context) => NavBar()),
                   );
                 },
                 text: "Go to Bress app",

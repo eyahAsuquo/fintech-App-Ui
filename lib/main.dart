@@ -1,4 +1,4 @@
-import 'package:fintech_ui/screens/profile/profile.dart';
+import 'package:fintech_ui/screens/onboarding/onboarding_screen.dart';
 
 import 'package:fintech_ui/utils/colors/colors.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Fintech UI',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: blueColor)),
-      home: ProfilePage(),
+      home: OnboardingScreen(),
     );
   }
 }

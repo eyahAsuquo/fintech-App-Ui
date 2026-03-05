@@ -1,4 +1,6 @@
+import 'package:fintech_ui/nav_bar.dart';
 import 'package:fintech_ui/screens/forgetPassword/forget_password.dart';
+import 'package:fintech_ui/screens/signUp/sign_up.dart';
 import 'package:fintech_ui/utils/colors/colors.dart';
 import 'package:fintech_ui/widgets/button.dart';
 import 'package:fintech_ui/widgets/form_fields.dart';
@@ -124,7 +126,11 @@ class _LogInPageState extends State<LogInPage> {
               children: [
                 Expanded(
                   child: Button(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(
+                        context,
+                      ).push(MaterialPageRoute(builder: (_) => SignUpPage()));
+                    },
                     text: "Register",
                     bgColor: const Color(0xFFEBF0F8),
                     fgColor: blueColor,
@@ -134,7 +140,11 @@ class _LogInPageState extends State<LogInPage> {
                 Expanded(
                   flex: 2,
                   child: Button(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(
+                        context,
+                      ).push(MaterialPageRoute(builder: (_) => NavBar()));
+                    },
                     text: "Login",
                     bgColor: blueColor,
                     fgColor: white,
